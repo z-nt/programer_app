@@ -1,12 +1,14 @@
-import 'package:myapp/main.dart';
-import  'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
-
-
-class SingIn extends StatelessWidget {
+class SingIn extends StatefulWidget {
       const SingIn ({super.key});
+
+  @override
+  State<SingIn> createState() => _SingInState();
+}
+
+class _SingInState extends State<SingIn> {
   @override
   Widget build(BuildContext context) {
       return Scaffold(
@@ -24,12 +26,12 @@ class SingIn extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed:()=> context.go('/Login/Registration') 
-                ,
-                child: Text('go to register'))
+                onPressed: (){
+                  context.goNamed("regis");
+                },
+                child: const Text('go to register'))
               ],
             ),
       );
   }
-
 }

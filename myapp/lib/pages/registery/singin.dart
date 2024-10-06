@@ -3,11 +3,9 @@ import 'package:go_router/go_router.dart';
 
 class SingIn extends StatefulWidget {
       const SingIn ({super.key});
-
   @override
   State<SingIn> createState() => _SingInState();
 }
-
 class _SingInState extends State<SingIn> {
   @override
   Widget build(BuildContext context) {
@@ -25,7 +23,6 @@ class _SingInState extends State<SingIn> {
               child: Center(
                 child: Column(
                   children:<Widget>[
-                    
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
@@ -35,9 +32,6 @@ class _SingInState extends State<SingIn> {
                           ),
                       ),
                     ),
-                
-                
-                    
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
@@ -47,8 +41,6 @@ class _SingInState extends State<SingIn> {
                           ),
                       ),
                     ),
-                
-                   
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -62,10 +54,6 @@ class _SingInState extends State<SingIn> {
                                 child: const Text('Login')
                                 ),
                           ),
-                                    
-                                    
-                                    
-                                    
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: ElevatedButton(

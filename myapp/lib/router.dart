@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 
 GoRouter goRouter() {
     return GoRouter(
-      initialLocation: '/singin',
+      initialLocation: '/regis',
         routes: <RouteBase> [
           GoRoute(
             path: '/regis',

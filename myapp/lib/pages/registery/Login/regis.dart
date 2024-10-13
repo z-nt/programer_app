@@ -22,7 +22,7 @@ class Registeration extends StatelessWidget {
                 height:100,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                    child: FormInput(text: 'send code to your number', name:'phoneNumbver' )
+                    child: FormInput(text: 'send code to your number', name:'phoneNumber' )
                 ),
               ),
             ),

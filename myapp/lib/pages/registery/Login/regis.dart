@@ -1,4 +1,5 @@
 import  'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:myapp/pages/styles/style.dart';
 import 'package:myapp/pages/widget/widget.dart';
 
@@ -13,20 +14,74 @@ class Registeration extends StatelessWidget {
             appBar:AppBar(
               title: Text('Registeration'),
             ),
-            body: Center(
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.red)
-                ),
-                width: 600,
-                height:100,
+
+            body:  Container(
+               decoration: BoxDecoration(
+                         border: Border.all(color:Colors.green)
+                       ),
+                height: 400,
+                  foregroundDecoration: BoxDecoration(),
+                  alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                    child: FormInput(text: 'send code to your number', name:'phoneNumber' )
+                  child: Column(
+                    
+                    mainAxisSize: MainAxisSize.min,
+                    children:<Widget>[
+                      
+                        Semantics(
+                          sortKey: OrdinalSortKey(1.0),
+                          child:  FormInput(text: 'send a code to your number', name: 'phoneNumber'),
+                        ),
+                       
+                        Semantics(
+                          sortKey: OrdinalSortKey(2.0),
+                          child:  ButtonWidget( name: 'send'),
+                        )
+                       
+                  
+                        
+                                
+                               
+                  
+                  
+                    ],
+                  ),
                 ),
-              ),
+
+
+
             ),
+
+
+
+
+
+            // body: Container(
+            //   // child: Column(
+            //   //   children:<Widget>[
+                   
+            //   //       Container(
+            //   //         decoration: BoxDecoration(
+            //   //           border: Border.all(color:Colors.red)
+            //   //         ),
+            //   //         width: 600,
+            //   //         height: 200,
+            //   //         child: Padding(
+            //   //           padding: const EdgeInsets.all(8.0),
+            //   //           child: const ButtonWidget(name: 'send')
+            //   //         ),    
+            //   //     ),
+                 
+
+
+
+
+            //   //   ],
             
+              
+            //   ),
+            // ),
       );
   }
 

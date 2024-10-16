@@ -1,20 +1,15 @@
-
-
-
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import  'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:myapp/pages/widget/widget.dart';
 
-class Verify extends StatelessWidget{
-  const Verify ({super.key});
-
-
+class ForgetPass extends StatelessWidget {
+      const ForgetPass ({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-          appBar: AppBar(
-            title: Text('verify'),
-          ),
+      return Scaffold(
+            appBar:AppBar(
+              title: Text('Registeration'),
+            ),
 
             body:  Container(
                decoration: BoxDecoration(
@@ -32,23 +27,18 @@ class Verify extends StatelessWidget{
                       
                         Semantics(
                           sortKey: OrdinalSortKey(1.0),
-                          child:  FormInput(text: '********', name: 'Registratin'),
+                          child:  FormInput(text: 'send a code to your number', name: 'phoneNumber'),
                         ),
                        
                         Semantics(
                           sortKey: OrdinalSortKey(2.0),
-                          child:  ButtonWidget( name: 'verifing...' , address: 'registering',),
+                          child:  ButtonWidget( name: 'send' , address: 'verifyPass',),
                         )
                     ],
                   ),
                 ),
             ),
-
-    );
+      );
   }
-
-
-
-
 
 }

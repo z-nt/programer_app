@@ -1,10 +1,6 @@
 import  'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
-import 'package:myapp/pages/styles/style.dart';
 import 'package:myapp/pages/widget/widget.dart';
-
-
-
 
 class Registeration extends StatelessWidget {
       const Registeration ({super.key});
@@ -36,52 +32,12 @@ class Registeration extends StatelessWidget {
                        
                         Semantics(
                           sortKey: OrdinalSortKey(2.0),
-                          child:  ButtonWidget( name: 'send'),
+                          child:  ButtonWidget( name: 'send' , address: 'verify',),
                         )
-                       
-                  
-                        
-                                
-                               
-                  
-                  
                     ],
                   ),
                 ),
-
-
-
             ),
-
-
-
-
-
-            // body: Container(
-            //   // child: Column(
-            //   //   children:<Widget>[
-                   
-            //   //       Container(
-            //   //         decoration: BoxDecoration(
-            //   //           border: Border.all(color:Colors.red)
-            //   //         ),
-            //   //         width: 600,
-            //   //         height: 200,
-            //   //         child: Padding(
-            //   //           padding: const EdgeInsets.all(8.0),
-            //   //           child: const ButtonWidget(name: 'send')
-            //   //         ),    
-            //   //     ),
-                 
-
-
-
-
-            //   //   ],
-            
-              
-            //   ),
-            // ),
       );
   }
 

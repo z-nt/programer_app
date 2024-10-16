@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:myapp/pages/widget/widget.dart';
 
 class SingIn extends StatefulWidget {
       const SingIn ({super.key});
@@ -21,62 +21,50 @@ class _SingInState extends State<SingIn> {
             body:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Center(
-                child: Column(
-                  children:<Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'UserName',
-                          ),
+                child: Container(
+                  alignment: Alignment.center,
+                 decoration: BoxDecoration(
+                  
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.red
+                  )
+                 ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:<Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(4.0),
+                          child: const FormInput(text: 'username', name: 'username'),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'PassWord',
-                          ),
+                      Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: const FormInput(text: '*******', name: 'password'),
+                  
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children:<Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: ElevatedButton(
-                                onPressed: (){
-                                  context.goNamed("regis");
-                                },
-                                child: const Text('Login')
-                                ),
-                          ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: Row(
+                          children:<Widget>[
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ElevatedButton(
-                                onPressed: (){
-                                 
-                                },
-                                child:Text('forgetPasword..!') 
-                                ),
+                              padding: const EdgeInsets.all(2.0),
+                              child: ButtonWidget(name: 'Login', address: 'login',),
                             ),
-                                    
+                            
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ElevatedButton(
-                                onPressed: (){
-                                 
-                                },
-                                child:Text('Register') 
-                                ),
+                                padding: const EdgeInsets.all(2.0),
+                                child: ButtonWidget(name: 'forgetPassword',address:'forgetPass',),
                             ),
-                        ],
-                      ),
-                    )
-                  ],
+                                        
+                            Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: ButtonWidget(name: 'Register' , address: 'regis',),
+                              ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

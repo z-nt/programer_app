@@ -1,4 +1,4 @@
-import 'package:myapp/pages/registery/Login/regis.dart';
+import 'package:myapp/pages/registery/Login/sendCode.dart';
 import 'package:myapp/pages/registery/Login/registering.dart';
 import 'package:myapp/pages/registery/Login/verifyCode.dart';
 import 'package:myapp/pages/registery/forgetPass/forgetPass.dart';
@@ -14,8 +14,8 @@ GoRouter goRouter() {
       initialLocation: '/singin',
         routes: <RouteBase> [
           GoRoute(
-            path: '/regis',
-            name: 'regis',
+            path: '/sendCode',
+            name: 'sendCode',
             builder: (context,state) {
               return const Registeration();
             }

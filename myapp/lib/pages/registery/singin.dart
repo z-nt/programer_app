@@ -12,26 +12,33 @@ class _SingInState extends State<SingIn> {
   Widget build(BuildContext context) {
       return Scaffold(
             
-            appBar:AppBar(
-              title: Text('Sign Up'),
-              titleTextStyle: titleTextStyle,
-              centerTitle: true,
-               
-            ),
             body:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Center(
+                
                 child: Container(
-                  transformAlignment: Alignment.center,
+              
                   width: 400,
                   height: 500,
                   
                   alignment: Alignment.center,
+
+
+
                   child: Column(
+              
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
+                    
                     children:<Widget>[
-
-
+                        Row(
+                          children: [
+                            Text('Sign Up' , 
+                              style: titleTextStyle,
+                            )
+                          ],
+                          
+                        ),
 
                       Padding(
                         padding: const EdgeInsets.all(4.0),
@@ -80,7 +87,7 @@ class _SingInState extends State<SingIn> {
                              
                                Padding(
                                         padding: const EdgeInsets.all(2.0),
-                                        child: TextButtonWidget(name: 'Register' , address: 'regis',)               
+                                        child: TextButtonWidget(name: 'Register' , address: 'sendCode',)               
                               
                                     ),
                              
